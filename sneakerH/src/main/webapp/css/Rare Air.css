@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.product-page {
+  display: flex;
+  padding: 5rem;
+  gap: 5rem;
+}
+
+.product-image-gallery {
+  display: flex;
+  gap: 2rem;
+}
+
+.thumbnail-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thumbnail {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.thumbnail:hover {
+  border-color: gray;
+  transform: scale(1.05);
+}
+
+.product-image img {
+  width: 500px;
+  border-radius: 20px;
+}
+
+.product-info {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.price {
+  margin: 2rem 0;
+}
+
+.current-price {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: grey;
+  margin-left: 1.5rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  background-color: gray;
+  color: white;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.dropdown select {
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+  border: 1px solid black;
+}
+
+.quantity input {
+  width: 60px;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.policies {
+  margin-top: 2rem;
+}
+
+details summary {
+  margin: 1rem 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup {
+  display: none;
+  background-color: limegreen;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px limegreen;
+}
