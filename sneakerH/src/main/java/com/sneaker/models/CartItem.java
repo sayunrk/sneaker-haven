@@ -1,26 +1,20 @@
 package com.sneaker.models;
 
-public class Product {
+public class CartItem {
     private int productId;
     private String productName;
     private String size;
-    private int quantity;
-    private String image;
     private int price;
-    private String description;
+    private int quantity;
 
-    // Constructor
-    public Product(int productId, String productName, String size, int quantity, String image, int price, String description) {
+    public CartItem(int productId, String productName, String size, int price, int quantity) {
         this.productId = productId;
         this.productName = productName;
         this.size = size;
-        this.quantity = quantity;
-        this.image = image;
         this.price = price;
-        this.setDescription(description);
+        this.quantity = quantity;
     }
 
-    // Getters and Setters
     public int getProductId() {
         return productId;
     }
@@ -45,6 +39,14 @@ public class Product {
         this.size = size;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public int getQuantity() {
         return quantity;
     }
@@ -53,27 +55,7 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public String getImage() {
-        return image;
+    public int getTotalPrice() {
+        return price * quantity;
     }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-	public int getPrice() {
-		return price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
 }

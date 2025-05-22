@@ -1,0 +1,120 @@
+/* Reset default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Shopping cart container */
+.cart-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+}
+
+.cart-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffffdd;
+}
+
+/* Message */
+.cart-container p {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #cccccc;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ff3c38;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e32e2b;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+footer .footer-section {
+  margin: 20px;
+}
+
+footer .footer-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+footer a:hover {
+  color: #ff3c38;
+}
+
+/* Social icons */
+footer .social-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons i:hover {
+  color: #ff3c38;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .footer-section {
+    margin: 10px 0;
+  }
+}

@@ -1,4 +1,3 @@
-/* Video Section */
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +18,6 @@
 }
 
 
-
-/* Description */
 .desc {
   position: absolute;
   top: 78%;
@@ -49,9 +46,6 @@
 
 }
 
-
-/* Shop now BUTTON */
-
 .btn {
   padding: 10px 30px;
   border-radius: 999px;
@@ -69,10 +63,6 @@
   cursor: pointer;
   background: rgb(200, 200, 200);
 }
-
-
-
-/* brand*/
 
 .brand-grid {
   display: flex;

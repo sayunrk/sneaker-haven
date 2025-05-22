@@ -14,22 +14,27 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/MSI/Year 2/sem 4/Advanced programming/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/MSI/Downloads/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/MSI/Downloads/jstl-1.2.jar/jstl-1.2.jar">
+	<classpathentry kind="lib" path="C:/MSI/Year 2/sem 4/Advanced programming/jar files/jakarta.activation-2.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/MSI/Downloads/taglibs-standard-impl-1.2.5-javadoc.jar">
+	<classpathentry kind="lib" path="C:/MSI/Year 2/sem 4/Advanced programming/jar files/jakarta.servlet.jsp.jstl-2.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/MSI/Downloads/taglibs-standard-spec-1.2.5-javadoc.jar">
+	<classpathentry kind="lib" path="C:/MSI/Year 2/sem 4/Advanced programming/jar files/jakarta.servlet.jsp.jstl-api-2.0.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/MSI/Year 2/sem 4/Advanced programming/jar files/jakarta.xml.bind-api-3.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

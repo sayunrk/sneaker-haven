@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+
+}
+
+.form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.logo {
+    width: 60px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+form button {
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+.message {
+    margin-top: 20px;
+    color: #f44;
+    font-size: 14px;
+}
+
+.image-section {
+    flex: 1;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+S
+.image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+button {
+  width: 60%;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.register {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.right-box {
+  width: 55%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 25px 25px 0;
+}
+
+.left-box {
+  background: #fff;
+  padding: 60px 40px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Image {
+  width: 130px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.left-box h2 {
+  letter-spacing: 6px;
+  margin-bottom: 25px;
+  font-size: 22px;
+  text-align: center;
+}

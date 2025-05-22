@@ -1,66 +1,64 @@
 package com.sneaker.servlets;
 
-import java.io.*;
+import java.io.IOException;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
-import java.sql.*;
-
-import com.sneaker.util.DbConfig;
+import com.sneaker.controller.RegisterController;
 
 public class RegisterServlet extends HttpServlet {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getRequestDispatcher("register.jsp").forward(request, response);
+    }
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-		request.getRequestDispatcher("/WEB-INF/pages/register.jsp").forward(request, response);
-}
-	
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Get the form data
         String userName = request.getParameter("userName");
         String address = request.getParameter("address");
         String phoneNumber = request.getParameter("phoneNumber");
-        String password = request.getParameter("password");
         String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String confirmPassword = request.getParameter("confirmPassword");
 
-        if (userName == null || userName.isEmpty() || 
-            address == null || address.isEmpty() || 
-            phoneNumber == null || phoneNumber.isEmpty() || 
-            password == null || password.isEmpty() || 
-            email == null || email.isEmpty()) {
-            
+        System.out.println("RegisterServlet: Received Data ->");
+        System.out.println("userName: " + userName);
+        System.out.println("address: " + address);
+        System.out.println("phoneNumber: " + phoneNumber);
+        System.out.println("email: " + email);
+        System.out.println("password: " + password);
+        System.out.println("confirmPassword: " + confirmPassword);
+
+        if (userName == null || userName.isEmpty() ||
+            address == null || address.isEmpty() ||
+            phoneNumber == null || phoneNumber.isEmpty() ||
+            email == null || email.isEmpty() ||
+            password == null || password.isEmpty() ||
+            confirmPassword == null || confirmPassword.isEmpty()) {
+            System.out.println("Validation Failed: One or more fields are empty.");
             response.sendRedirect("register.jsp?error=Please fill in all fields");
             return;
         }
 
-        String sql = "INSERT INTO user (User_Name, Address, Phone_Number, Password, Email) VALUES (?, ?, ?, ?, ?)";
+        if (!password.equals(confirmPassword)) {
+            System.out.println("Validation Failed: Passwords do not match.");
+            response.sendRedirect("register.jsp?error=Passwords do not match");
+            return;
+        }
 
-        try (Connection conn = DbConfig.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+        System.out.println("Validation Passed: Attempting to register user...");
 
-            stmt.setString(1, userName);
-            stmt.setString(2, address);
-            stmt.setString(3, phoneNumber);
-            stmt.setString(4, password);
-            stmt.setString(5, email);
+        boolean success = RegisterController.registerUser(userName, address, phoneNumber, password, email);
 
-            int rowsAffected = stmt.executeUpdate();
-
-            if (rowsAffected > 0) {
-        		request.getRequestDispatcher("login.jsp").forward(request, response);
-            } else {
-                response.sendRedirect("register.jsp?error=Registration failed, please try again.");
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            response.sendRedirect("register.jsp?error=Database error: " + e.getMessage());
+        if (success) {
+            System.out.println("Registration successful.");
+            response.sendRedirect("login.jsp?message=Registration successful, please login");
+        } else {
+            System.out.println("Registration failed at controller.");
+            response.sendRedirect("register.jsp?error=Registration failed, please try again");
         }
     }
-}
+
+    }
